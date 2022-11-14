@@ -28,6 +28,9 @@ gem 'dotenv-rails'
 gem 'net-smtp', require: false
 gem 'net-imap', require: false
 gem 'net-pop', require: false
+gem 'active_storage_validations'
+gem 'mini_magick'
+gem 'image_processing'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
 
 	def show
-
+		@microposts = @user.microposts.page params[:page]
 	end
 
 	def new
@@ -62,14 +62,6 @@ class UsersController < ApplicationController
 
 	def correct_user
     redirect_to root_url unless current_user?(@user)
-  end
-
-  def logged_in_user
-    unless logged_in?
-    	store_location
-      flash[:danger] = "Please log in."
-      redirect_to login_url
-    end
   end
 
   def admin_user
